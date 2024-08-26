@@ -126,7 +126,10 @@ def clearfunc():
 
 def popfunc():
     global mains
-    mains = mains[:len(mains) - 1]
+    if len(mains) == 1:
+        mains = "0"
+    else:
+        mains = mains[:len(mains) - 1]
     edit.setText(mains)
 
 b0.clicked.connect(lambda: raqam("0"))
