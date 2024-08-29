@@ -75,7 +75,7 @@ mains = "0"
 
 def oxirgison(s: str) ->str:
     n = ""
-    for i in s:
+    for i in s[::-1]:
         if not i in ["+", "-", "*", "/"]:
             n += i
         else:
